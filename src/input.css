@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cor1: #f9ef23;
+    --font-anton: 'Anton', sans-serif;
+    --font-host: 'Host Grotesk', sans-serif;
+}
+
+li {
+    list-style: none;
+    font-family: var(--font-anton);
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+ul#ul-menu > li {
+    text-transform: uppercase;
+}

@@ -15,7 +15,7 @@
 
 <body>
     <main>
-        <section class="w-screen h-screen bg-black bg-[url(imgs/tripe-photo.jpg)] bg-cover bg-center">
+        <section class="w-screen h-screen bg-black bg-[url(imgs/tripe-photo.jpg)] bg-cover bg-center bg-fixed">
         <!--Zona do Header, há o logo e os menus-->
             <header class="p-2">
                 <menu class="flex justify-between items-center">
@@ -26,11 +26,11 @@
                                 class="text-shadow-lg">Manuel Academy</span></li>
                     </ul>
                     <ul class="flex justify-center items-center">
-                        <li class="flex items-center justify-centerr"><span class="material-symbols-outlined" onclick="ativarmenu()">menu</span></li>
+                        <li class="flex items-center justify-centerr"><span class="material-symbols-outlined" onclick="ativarMenu()">menu</span></li>
                     </ul>
                 </menu>
-                <menu class="my-8">
-                    <ul class=" text-right bg-[#00000067] text-white rounded-lg hidden" id="ul-menu">
+                <menu>
+                    <ul class=" text-right bg-[#00000067] text-white rounded-lg animate-ping" id="ul-menu" style="display: none;">
                         <li class="p-1.5"><a>About us</a></li>
                         <li class="p-1.5"><a>What we offer</a></li>
                         <li class="p-1.5"><a>Commentaries</a></li>
@@ -41,8 +41,13 @@
         </section>
     </main>
     <script>
-        artivarMenu() {
-            if
+        const menu = document.getElementById('ul-menu')
+        function ativarMenu() {
+            if (menu.style.display === 'none') {
+                menu.style.display = 'block'
+            }else {
+                menu.style.display = 'none'
+            }
         }
     </script>
 </body>

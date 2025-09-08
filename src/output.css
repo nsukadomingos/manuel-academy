@@ -1,66 +1,6 @@
 /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
-@layer properties;
-.block {
-  display: block;
-}
-.flex {
-  display: flex;
-}
-.h-1\/2 {
-  height: calc(1/2 * 100%);
-}
-.h-screen {
-  height: 100vh;
-}
-.w-\[1\] {
-  width: 1;
-}
-.w-\[3px\] {
-  width: 3px;
-}
-.w-\[10px\] {
-  width: 10px;
-}
-.w-\[30px\] {
-  width: 30px;
-}
-.w-screen {
-  width: 100vw;
-}
-.items-center {
-  align-items: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-.justify-center {
-  justify-content: center;
-}
-.bg-\[\#00000067\] {
-  background-color: #00000067;
-}
-.bg-\[url\(imgs\/tripe-photo\.jpg\)\] {
-  background-image: url(imgs/tripe-photo.jpg);
-}
-.bg-cover {
-  background-size: cover;
-}
-.bg-fixed {
-  background-attachment: fixed;
-}
-.bg-center {
-  background-position: center;
-}
-.text-right {
-  text-align: right;
-}
-.duration-500 {
-  --tw-duration: 500ms;
-  transition-duration: 500ms;
-}
-.ease-linear {
-  --tw-ease: linear;
-  transition-timing-function: linear;
+.text-center {
+  text-align: center;
 }
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
 :root {
@@ -76,20 +16,4 @@ li {
 }
 ul#ul-menu > li {
   text-transform: uppercase;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-duration: initial;
-      --tw-ease: initial;
-    }
-  }
 }

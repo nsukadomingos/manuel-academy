@@ -32,14 +32,8 @@
 .justify-center {
   justify-content: center;
 }
-.self-center {
-  align-self: center;
-}
 .bg-\[\#00000067\] {
   background-color: #00000067;
-}
-.bg-\[\#000080\] {
-  background-color: #000080;
 }
 .bg-\[url\(\'\.\/imgs\/tripe-photo\.jpg\'\)\] {
   background-image: url('./imgs/tripe-photo.jpg');
@@ -49,6 +43,9 @@
 }
 .bg-center {
   background-position: center;
+}
+.text-center {
+  text-align: center;
 }
 .uppercase {
   text-transform: uppercase;

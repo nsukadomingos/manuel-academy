@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --cor1: #f9ef23;
     --font-anton: 'Anton', sans-serif;
@@ -10,12 +16,19 @@
 }
 
 li {
+    text-align: center;
+    padding: 5px;
+    font-family: var(--font-anton);
+}
+
+li, span {
     list-style: none;
     font-family: var(--font-anton);
     color: var(--cor1);
     cursor: pointer;
 }
 
-ul#ul-menu > li {
-    text-transform: uppercase;
+menu#menu_list li {
+    text-align: right;
 }
+

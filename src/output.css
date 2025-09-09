@@ -1,19 +1,80 @@
 /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
-.text-center {
-  text-align: center;
+.flex {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.h-auto {
+  height: auto;
+}
+.h-dvh {
+  height: 100dvh;
+}
+.w-\[30px\] {
+  width: 30px;
+}
+.w-\[calc\(100vw-40px\)\] {
+  width: calc(100vw - 40px);
+}
+.w-full {
+  width: 100%;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.self-center {
+  align-self: center;
+}
+.bg-\[\#00000067\] {
+  background-color: #00000067;
+}
+.bg-\[\#000080\] {
+  background-color: #000080;
+}
+.bg-\[url\(\'\.\/imgs\/tripe-photo\.jpg\'\)\] {
+  background-image: url('./imgs/tripe-photo.jpg');
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-center {
+  background-position: center;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --cor1: #f9ef23;
   --font-anton: 'Anton', sans-serif;
   --font-host: 'Host Grotesk', sans-serif;
 }
 li {
+  text-align: center;
+  padding: 5px;
+  font-family: var(--font-anton);
+}
+li, span {
   list-style: none;
   font-family: var(--font-anton);
   color: var(--cor1);
   cursor: pointer;
 }
-ul#ul-menu > li {
-  text-transform: uppercase;
+menu#menu_list li {
+  text-align: right;
 }

@@ -3,6 +3,15 @@
 .static {
   position: static;
 }
+.my-\[px\] {
+  margin-block: px;
+}
+.mt-5 {
+  margin-top: calc(var(--spacing) * 5);
+}
+.mt-\[10px\] {
+  margin-top: 10px;
+}
 .contents {
   display: contents;
 }
@@ -12,8 +21,8 @@
 .hidden {
   display: none;
 }
-.table {
-  display: table;
+.h-\[50px\] {
+  height: 50px;
 }
 .h-auto {
   height: auto;
@@ -24,20 +33,26 @@
 .w-\[30px\] {
   width: 30px;
 }
-.w-\[calc\(100vw-40px\)\] {
-  width: calc(100vw - 40px);
+.w-\[80vw\] {
+  width: 80vw;
+}
+.w-\[200px\] {
+  width: 200px;
 }
 .w-full {
   width: 100%;
 }
-.border-collapse {
-  border-collapse: collapse;
+.animate-down {
+  animation: var(--animate-down);
 }
-.resize {
-  resize: both;
+.animate-drog {
+  animation: var(--animate-drog);
 }
 .flex-col {
   flex-direction: column;
+}
+.content-center {
+  align-content: center;
 }
 .items-center {
   align-items: center;
@@ -51,18 +66,29 @@
 .gap-2 {
   gap: calc(var(--spacing) * 2);
 }
-.gap-3 {
-  gap: calc(var(--spacing) * 3);
+.gap-5 {
+  gap: calc(var(--spacing) * 5);
+}
+.self-center {
+  align-self: center;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 .rounded-lg {
   border-radius: var(--radius-lg);
 }
-.border {
-  border-style: var(--tw-border-style);
-  border-width: 1px;
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.bg-\[\#0E0E0E\] {
+  background-color: #0E0E0E;
 }
 .bg-\[\#00000067\] {
   background-color: #00000067;
+}
+.bg-\[\#f9ef23\] {
+  background-color: #f9ef23;
 }
 .bg-\[url\(\'\.\/imgs\/tripe-photo\.jpg\'\)\] {
   background-image: url('./imgs/tripe-photo.jpg');
@@ -76,13 +102,39 @@
 .p-5 {
   padding: calc(var(--spacing) * 5);
 }
-.text-6xl {
-  font-size: var(--text-6xl);
-  line-height: var(--tw-leading, var(--text-6xl--line-height));
+.pt-\[60vh\] {
+  padding-top: 60vh;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.font-\[\'anton\'\] {
+  font-family: 'anton';
+}
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+}
+.text-5xl {
+  font-size: var(--text-5xl);
+  line-height: var(--tw-leading, var(--text-5xl--line-height));
 }
 .text-base {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
+}
+.font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+.text-\[\#f9ef23\] {
+  color: #f9ef23;
+}
+.text-black {
+  color: var(--color-black);
 }
 .text-white {
   color: var(--color-white);
@@ -90,12 +142,10 @@
 .uppercase {
   text-transform: uppercase;
 }
-.underline {
-  text-decoration-line: underline;
-}
-.outline {
-  outline-style: var(--tw-outline-style);
-  outline-width: 1px;
+.shadow-xl\/30 {
+  --tw-shadow-alpha: 30%;
+  --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 30%)), 0 8px 10px -6px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 30%));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 @layer theme, base, components, utilities;
 @layer theme {
@@ -104,15 +154,22 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-semibold: 600;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --animate-down: dropdown 200ms ease-in-out;
+    --animate-drog: toside 5s ease-in;
   }
 }
 @layer base {
@@ -265,6 +322,11 @@
 }
 @layer utilities;
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+@layer components {
+  .lidefault {
+    text-align: right;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -275,34 +337,115 @@
   --font-anton: 'Anton', sans-serif;
   --font-host: 'Host Grotesk', sans-serif;
 }
-li {
-  text-align: center;
-  font-family: var(--font-anton);
-}
 li, span {
   list-style: none;
   font-family: var(--font-anton);
   color: var(--cor1);
   cursor: pointer;
 }
-menu#menu_list li {
-  text-align: right;
-}
-@property --tw-border-style {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
 }
-@property --tw-outline-style {
+@property --tw-shadow {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes toside {
+  from {
+    transform: translateX(-20px) opacity: 0;
+  }
+  to {
+    transform: translateX(0px) opacity: 1;
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
     }
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -15,36 +15,72 @@
 
 <body>
     <main>
-        <section class="bg-[url('./imgs/tripe-photo.jpg')] w-full h-dvh bg-cover bg-center">
+        <!--FIST SECTION WITH HEADER AND FIRST TEXT-->
+        <section class="bg-[url('./imgs/tripe-photo.jpg')] w-full h-dvh bg-cover bg-center flex flex-col" id="first_section">
             <header>
                 <menu class="p-5 justify-between flex">
                     <ul id="ul-menu">
-                        <li class="flex items-center gap-2">
-                            <img src="imgs/logo-full-inter.png" alt="" class="w-[30px] h-auto">
-                            <span class="uppercase text-base">Manuel Academy</span>
-                        </li>
+                        <a href="#first_section">
+                            <li class="flex items-center gap-2">
+                                <img src="imgs/logo-full-inter.png" alt="" class="w-[30px] h-auto">
+                                <span class="uppercase text-base">Manuel Academy</span>
+                            </li>
+                        </a>
                     </ul>
                     <ul>
                         <li><span class="material-symbols-outlined" id="menu-icon">menu</span></li>
                     </ul>
                 </menu>
-                <menu id="menu-list" class="hidden flex  justify-center">
-                    <ul class="w-[calc(100vw-40px)] flex flex-col wrap gap-3 p-5 content-right bg-[#00000067] rounded-lg">
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
+                <menu id="menu-list" class="hidden justify-center items-center animate-down">
+                    <ul class="w-[80vw] flex flex-col wrap gap-5 p-5 bg-[#00000067] rounded-lg text-right">
+                        <a href="#secound_section">
+                            <li class="uppercase font-['anton'] lidefault animate-drog">About us</li>
+                        </a>
+                        <li class="uppercase font-['anton'] lidefault animate-drog">What we offer</li>
+                        <li class="uppercase font-['anton'] lidefault animate-drog">Commentaries</li>
+                        <li class="uppercase font-['anton'] lidefault animate-drog">Call US</li>
                     </ul>
                 </menu>
             </header>
-            <article class="p-5">
-                <h1 class="uppercase center text-white text-anton text-6xl">do your better ever!</h1>
+            <article class="flex flex-col p-5 gap-5 justify-center items-center content-center self-center pt-[60vh]">
+                <h1 class="uppercase text-center text-white font-['anton'] text-5xl">do your better ever!</h1>
+                <a href="https://wa.me/+351933568850" target="_blank">
+                    <button class="uppercase bg-[#f9ef23] w-[200px] h-[50px] rounded-xl"><span
+                            class="text-center text-black font-lighter">Subscrie Today</span></button>
+                </a>
             </article>
         </section>
+
+        <!--SECOND SECTION WITH INFO ABOUT MANUEL ACADEMY-->
+        <section class=" flex flex-col bg-[#0E0E0E] fit-content p-5" id="secound_section">
+            <article class="mt-5">
+                <h2 class="text-[#f9ef23] font-['anton'] text-4xl">About Us</h2>
+                <p class="text-white my-[px] font-['Host Grotesk'] font-semibold text-base">Manuel Academy is a modern gym
+                    focused on strength training and
+                    bodybuilding. With top-quality
+                    equipment, expert trainers, and a
+                    motivating environment, we help you
+                    build muscle, improve health, and
+                    achieve your fitness goals.</p>
+            </article>
+            <article class=" flex flex-col gap-5 mt-[10px]">
+                <img src="imgs/homem_com_bola.jpg" alt=""  class="rounded-lg shadow-xl/30">
+                <img src="imgs/mulher_com_tripe.jpg" alt="" class="rounded-lg shadow-xl/30">
+            </article>
+        </section>
+
+        <!--THIRD SECTION WITH COMENTTARIES-->
+        <section class="flex flex-col bg-[#0E0E0E] fit-content p-5" id="third_section">
+            <article>
+                <h2 class="text-[#f9ef23] font-['anton'] text-4xl">What We Offer</h2>
+            </article>
+            <article>
+
+            </article>
+        </section>
+
     </main>
     <script src="./script.js">
-
     </script>
 </body>
 

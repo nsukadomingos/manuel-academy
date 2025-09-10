@@ -1,7 +1,40 @@
-
+@tailwind components;
 @tailwind utilities;
+@tailwind base;
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+@layer components {
+    .lidefault {
+        text-align: right;
+    }
+}
+
+@theme {
+    --animate-down: dropdown 200ms ease-in-out;
+    @keyframes dropdown {
+        from {
+            transform: translateY(-10px)
+        }
+        to {
+            transform: translateY(0px)
+        }
+    }
+}
+
+@theme {
+    --animate-drog: toside 5s ease-in;
+    @keyframes toside {
+        from {
+            transform: translateX(-20px)
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0px)
+            opacity: 1;
+        }
+    }
+}
 
 * {
     margin: 0;
@@ -15,19 +48,10 @@
     --font-host: 'Host Grotesk', sans-serif;
 }
 
-li {
-    text-align: center;
-    font-family: var(--font-anton);
-}
-
 li, span {
     list-style: none;
     font-family: var(--font-anton);
     color: var(--cor1);
     cursor: pointer;
-}
-
-menu#menu_list li {
-    text-align: right;
 }
 

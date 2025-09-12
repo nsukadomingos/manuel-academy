@@ -22,7 +22,7 @@
 }
 
 @theme {
-    --animate-drog: toside 5s ease-in;
+    --animate-drog: toside 5s linear;
     @keyframes toside {
         from {
             transform: translateX(-20px)
@@ -31,6 +31,35 @@
 
         to {
             transform: translateX(0px)
+            opacity: 1;
+        }
+    }
+}
+
+@theme {
+    --animate-title: title 800ms ease-in-out;
+    @keyframes title {
+        from {
+            transform: translateY(-40px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@theme {
+    --animate-imgtoleft: toleft 800ms ease-in;
+    @keyframes toleft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0px);
             opacity: 1;
         }
     }

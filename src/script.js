@@ -2,6 +2,8 @@ const menu_icon = document.getElementById('menu-icon');
 
 const menu_list = document.getElementById('menu-list');
 
+const imagem = document.getElementById("teste");
+
 menu_icon.addEventListener("click", function () {
     if (menu_list.classList.contains('hidden')) {
         menu_list.classList.add('h-auto');
@@ -14,3 +16,11 @@ menu_icon.addEventListener("click", function () {
         menu_icon.innerHTML = '<span class="material-symbols-outlined">menu</span>'
     }
 });
+
+function ocultar() {
+    if (menu_list.classList.contains('flex')) {
+        menu_list.classList.remove('flex')
+        menu_list.classList.add('hidden')
+        menu_icon.innerHTML = '<span class="material-symbols-outlined">menu</span>'
+    }
+}
